@@ -131,7 +131,7 @@
 		};
 		one {
 			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&undo_macro &lt 4 &settings_macro &closetab_macro>;
+			bindings = <&undo_macro &lt 4 settings_macro &closetab_macro>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 			ledoverride;
 			r = <245>;
@@ -140,7 +140,7 @@
 		};
 		two {
 			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&cut_macro &lt 4 &copy_macro &paste_macro>;
+			bindings = <&cut_macro &lt 4 copy_macro &paste_macro>;
 			sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
 			ledoverride;
 			r = <0>;
@@ -149,7 +149,7 @@
 		};
 		three {
 			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&firstname_macro &lt 4 &firstname_macro &lastname_macro>;
+			bindings = <&email_macro &lt 4 firstname_macro &lastname_macro>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 			ledoverride;
 			r = <245>;
