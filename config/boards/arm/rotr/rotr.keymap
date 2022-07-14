@@ -22,7 +22,7 @@
 			= <&macro_press &kp LCTRL>
 			, <&macro_tap &kp C>
 			, <&macro_release &kp LCTRL>
-			;
+			; 
 		};
 		paste_macro: paste_macro {
 		compatible = "zmk,behavior-macro";
