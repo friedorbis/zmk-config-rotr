@@ -84,36 +84,6 @@
 			, <&macro_release &kp LALT>
 			;
 		};
-		email_macro: email_macro {
-		compatible = "zmk,behavior-macro";
-		label = "ZM_email_macro";
-		#binding-cells = <0>;
-		wait-ms = <0>;
-		tap-ms = <0>;
-		bindings
-			= <&macro_tap &kp Z &kp S &kp H &kp A &kp F &kp AT_SIGN &kp L &kp I &kp V &kp E &kp PERIOD &kp C &kp O &kp M>
-			;
-		};
-		firstname_macro: firstname_macro {
-		compatible = "zmk,behavior-macro";
-		label = "ZM_firstname_macro";
-		#binding-cells = <0>;
-		wait-ms = <0>;
-		tap-ms = <0>;
-		bindings
-			= <&macro_tap &kp Z &kp A &kp C &kp H &kp A &kp R &kp Y>
-			;
-		};
-		lastname_macro: lastname_macro {
-		compatible = "zmk,behavior-macro";
-		label = "ZM_lastname_macro";
-		#binding-cells = <0>;
-		wait-ms = <0>;
-		tap-ms = <0>;
-		bindings
-			= <&macro_tap &kp S &kp H &kp A &kp F &kp F &kp E &kp R>
-			;
-		};
 	};
 };
 
