@@ -149,7 +149,7 @@
 		};
 		three {
 			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&email_macro &lt 4 &firstname_macro &lastname_macro>;
+			bindings = <&firstname_macro &lt 4 &firstname_macro &lastname_macro>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 			ledoverride;
 			r = <245>;
