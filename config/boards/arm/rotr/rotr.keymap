@@ -11,12 +11,119 @@
 };
 
 / {
+	macros {
+		copy_macro: copy_macro {
+		compatible = "zmk,behavior-macro";
+		label = "ZM_copy_macro";
+		#binding-cells = <0>;
+		wait-ms = <0>;
+		tap-ms = <0>;
+		bindings
+			= <&macro_press &kp LCTRL>
+			, <&macro_tap &kp C>
+			, <&macro_release &kp LCTRL>
+			;
+		};
+		paste_macro: paste_macro {
+		compatible = "zmk,behavior-macro";
+		label = "ZM_paste_macro";
+		#binding-cells = <0>;
+		wait-ms = <0>;
+		tap-ms = <0>;
+		bindings
+			= <&macro_press &kp LCTRL>
+			, <&macro_tap &kp P>
+			, <&macro_release &kp LCTRL>
+			;
+		};
+		cut_macro: cut_macro {
+		compatible = "zmk,behavior-macro";
+		label = "ZM_cut_macro";
+		#binding-cells = <0>;
+		wait-ms = <0>;
+		tap-ms = <0>;
+		bindings
+			= <&macro_press &kp LCTRL>
+			, <&macro_tap &kp X>
+			, <&macro_release &kp LCTRL>
+			;
+		};
+		undo_macro: undo_macro {
+		compatible = "zmk,behavior-macro";
+		label = "ZM_undo_macro";
+		#binding-cells = <0>;
+		wait-ms = <0>;
+		tap-ms = <0>;
+		bindings
+			= <&macro_press &kp LCTRL>
+			, <&macro_tap &kp Z>
+			, <&macro_release &kp LCTRL>
+			;
+		};
+		settings_macro: settings_macro {
+		compatible = "zmk,behavior-macro";
+		label = "ZM_settings_macro";
+		#binding-cells = <0>;
+		wait-ms = <0>;
+		tap-ms = <0>;
+		bindings
+			= <&macro_press LEFT_GUI>
+			, <&macro_tap &kp I>
+			, <&macro_release LEFT_GUI>
+			;
+		};
+		closetab_macro: closetab_macro {
+		compatible = "zmk,behavior-macro";
+		label = "ZM_switchtab_macro";
+		#binding-cells = <0>;
+		wait-ms = <0>;
+		tap-ms = <0>;
+		bindings
+			= <&macro_press LALT>
+			, <&macro_tap F4>
+			, <&macro_release LALT>
+			;
+		};
+		email_macro: email_macro {
+		compatible = "zmk,behavior-macro";
+		label = "ZM_email_macro";
+		#binding-cells = <0>;
+		wait-ms = <0>;
+		tap-ms = <0>;
+		bindings
+			= <&macro_tap &kp Z &kp S &kp H &kp A &kp F AT_SIGN &kp L &kp I &kp V &kp E PERIOD &kp C &kp O &kp M>
+			;
+		};
+		firstname_macro: firstname_macro {
+		compatible = "zmk,behavior-macro";
+		label = "ZM_firstname_macro";
+		#binding-cells = <0>;
+		wait-ms = <0>;
+		tap-ms = <0>;
+		bindings
+			= <&macro_tap &kp Z &kp A &kp C &kp H &kp A &kp R &kp Y>
+			;
+		};
+		lastname_macro: lastname_macro {
+		compatible = "zmk,behavior-macro";
+		label = "ZM_lastname_macro";
+		#binding-cells = <0>;
+		wait-ms = <0>;
+		tap-ms = <0>;
+		bindings
+			= <&macro_tap &kp S &kp H &kp A &kp F &kp F &kp E &kp R>
+			;
+		};
+	};
+};
+
+/ {
 	keymap {
 		compatible = "zmk,keymap";
 
 		default_layer {
 			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&kp C_MUTE &lt 2 C_SLEEP_MODE &kp C_PP>;
+			bindings = <&undo_macro &lt 4 &settings_macro &closetab_macro>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 			ledoverride;
 			r = <0>;
@@ -25,16 +132,32 @@
 		};
 		one {
 			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&kp C_PREV &lt 2 C_PP &kp C_NEXT>;
+			bindings = <&kp C_PREV &lt 4 C_PP &kp C_NEXT>;
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+			ledoverride;
+			r = <245>;
+			g = <0>;
+			b = <0>;
+		};
+		two {
+			//PREV | PLAY/PAUSE | NEXT
+			bindings = <&cut_macro &lt 4 &copy_macro &paste_macro>;
 			sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
+			ledoverride;
+			r = <0>;
+			g = <245>;
+			b = <0>;
+		three {
+			//PREV | PLAY/PAUSE | NEXT
+			bindings = <&email_macro &lt 4 &firstname_macro &lastname_macro>;
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 			ledoverride;
 			r = <245>;
 			g = <245>;
 			b = <245>;
-		};
 		shift {
 			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&bt BT_CLR &trans &rgb_ug RGB_TOG>;
+			bindings = <&kp C_MUTE &trans &rgb_ug RGB_TOG>;
 			sensor-bindings = <&def_lshft>;
 		};
 	};
