@@ -47,6 +47,42 @@
 			, <&macro_release &kp LCTRL>
 			;
 		};
+		undo_macro: undo_macro {
+		compatible = "zmk,behavior-macro";
+		label = "ZM_undo_macro";
+		#binding-cells = <0>;
+		wait-ms = <0>;
+		tap-ms = <0>;
+		bindings
+			= <&macro_press &kp LCTRL>
+			, <&macro_tap &kp Z>
+			, <&macro_release &kp LCTRL>
+			;
+		};
+		settings_macro: settings_macro {
+		compatible = "zmk,behavior-macro";
+		label = "ZM_settings_macro";
+		#binding-cells = <0>;
+		wait-ms = <0>;
+		tap-ms = <0>;
+		bindings
+			= <&macro_press LEFT_GUI>
+			, <&macro_tap &kp I>
+			, <&macro_release LEFT_GUI>
+			;
+		};
+		closetab_macro: closetab_macro {
+		compatible = "zmk,behavior-macro";
+		label = "ZM_switchtab_macro";
+		#binding-cells = <0>;
+		wait-ms = <0>;
+		tap-ms = <0>;
+		bindings
+			= <&macro_press LALT>
+			, <&macro_tap F4>
+			, <&macro_release LALT>
+			;
+		};
     }; 
 };
 / {
