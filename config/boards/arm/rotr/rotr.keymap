@@ -21,12 +21,12 @@
 			ledoverride;
 			r = <0>;
 			g = <255>;
-			b = <247>;
+			b = <255>;
 		};
 		one {
 			//PREV | PLAY/PAUSE | NEXT
 			bindings = <&kp C_PREV &lt 2 C_PP &kp C_NEXT>;
-			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+			sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
 			ledoverride;
 			r = <245>;
 			g = <245>;
