@@ -146,30 +146,40 @@
 		compatible = "zmk,keymap";
 		default_layer {
 			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&discord_macro &lt 3 C_PP &spotify_macro>;
+			bindings = <&undo_macro &lt 4 &settings_macro &closetab_macro>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 			ledoverride;
 			r = <0>;
 			g = <255>;
-			b = <247>;
+			b = <255>;
 		};
 		one {
 			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&kp C_PREV &lt 3 C_PP &kp C_NEXT>;
+			bindings = <&kp C_PREV &lt 4 C_PP &kp C_NEXT>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 			ledoverride;
-			r = <255>;
+			r = <245>;
 			g = <0>;
-			b = <222>;
+			b = <0>;
 		};
 		two {
 			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&kp C_PREV &lt 3 C_PP &kp C_NEXT>;
+			bindings = <&cut_macro &lt 4 &copy_macro &paste_macro>;
+			sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
+			ledoverride;
+			r = <0>;
+			g = <245>;
+			b = <0>;
+		};
+		three {
+			//PREV | PLAY/PAUSE | NEXT
+			bindings = <&email_macro &lt 4 &firstname_macro &lastname_macro>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 			ledoverride;
-			r = <255>;
-			g = <0>;
-			b = <222>;
+			r = <245>;
+			g = <245>;
+			b = <245>;
+		};
 		shift {
 			//PREV | PLAY/PAUSE | NEXT
 			bindings = <&bt BT_CLR &trans &rgb_ug RGB_TOG>;
