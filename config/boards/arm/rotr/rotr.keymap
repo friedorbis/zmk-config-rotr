@@ -158,7 +158,7 @@
 		};
 		shift {
 			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&kb C_MUTE &trans &rgb_ug RGB_TOG>;
+			bindings = <&kp C_MUTE &trans &rgb_ug RGB_TOG>;
 			sensor-bindings = <&def_lshft>;
 		};
 	};
