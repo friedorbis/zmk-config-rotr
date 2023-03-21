@@ -122,7 +122,7 @@
 		compatible = "zmk,keymap";
 		default_layer {
 			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&copy_macro &lt 2 C_PP &paste_macro>;
+			bindings = <&copy_macro &lt 2 C_MUTE &paste_macro>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 			ledoverride;
 			r = <0>;
@@ -131,7 +131,7 @@
 		};
 		one {
 			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&hide_macro &lt 2 C_PP &refresh_macro>;
+			bindings = <&hide_macro &lt 2 C_MUTE &refresh_macro>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 			ledoverride;
 			r = <0>;
